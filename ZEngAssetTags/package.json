@@ -11,10 +11,14 @@
         "hdb": "^0.18.3"
     },
     "devDependencies": {
+        "@sap/ux-specification": "^1.100.2",
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src",
+        "watch-assetlist": "cds watch --open assetlist/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
+        "undeploy": "cf undeploy ZEngAssetTags --delete-services --delete-service-keys"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -42,13 +46,32 @@
         }
     },
     "cds": {
-        "requires": {
-            "db": {
-                "kind": "sql"
-            }
+        "build": {
+            "tasks": [
+                {
+                    "for": "hana",
+                    "dest": "../db"
+                },
+                {
+                    "for": "node-cf"
+                }
+            ]
         },
         "hana": {
             "deploy-format": "hdbtable"
+        },
+        "requires": {
+            "db": {
+                "kind": "hana"
+            }
+        },
+        "i18n": {
+            "folders": [
+                "i18n"
+            ]
         }
-    }
+    },
+    "sapux": [
+        "app/assetlist"
+    ]
 }
