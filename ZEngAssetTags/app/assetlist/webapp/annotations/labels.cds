@@ -123,5 +123,15 @@ Doctitle @title : '{i18n>Doctitle}';
 Comnt @title : '{i18n>Comnt}';
 }
 
+annotate schema.ZEDF4_Header1 with {
+Cdgrp @title : '{i18n>Cdgrp}';
+Cdgrpdsc @title : '{i18n>Cdgrpdsc}';
+};
+
+annotate schema.ZEDF4_Detail1 with {
+Code @title : '{i18n>Code}';
+Codedsc @title : '{i18n>Codedsc}';
+Codeltxt @title : '{i18n>Codeltxt}';
+};
 
   

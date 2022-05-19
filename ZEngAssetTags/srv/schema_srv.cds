@@ -8,11 +8,11 @@ service CatalogService  {
 
  
 
- //view VLDlc as select * from edm.ZEDF4_Detail1 where Cdgrp = (select ID from edm.ZEDF4_Header1 where Cdgrp = 'LALL');
-
- view ZValueList
+ //view VLDlc as select from edm.ZEDF4_Detail11 where Cdgrp = (select ID from edm.ZEDF4_Header11 where Cdgrp = 'LALL');
+  
+ /*view ZValueList
 	as  SELECT from edm.ZEDF4_Header1 LEFT JOIN edm.ZEDF4_Detail1 on ZEDF4_Header1.Cdgrp = ZEDF4_Detail1.Cdgrp {  ZEDF4_Header1.Cdgrp, ZEDF4_Header1.Cdgrpdsc, ZEDF4_Detail1.Code, ZEDF4_Detail1.Codedsc, ZEDF4_Detail1.Codeltxt  };
-
+*/
 
 /*
  view VLDlc as select from edm.ZEDF4_Detail1 

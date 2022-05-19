@@ -11,3 +11,4 @@ annotate CatalogService.MainEntity with @(
     }
 );
 
+annotate CatalogService.F4_Header with @odata.draft.enabled;

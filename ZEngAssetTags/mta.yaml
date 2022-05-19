@@ -37,9 +37,23 @@ modules:
       - comsuncorassetlist.zip
       name: comsuncorassetlist
       target-path: resources/
+    - artifacts:
+      - comsuncorvaluelist.zip
+      name: comsuncorvaluelist
+      target-path: resources/
 - name: comsuncorassetlist
   type: html5
   path: app/assetlist
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: comsuncorvaluelist
+  type: html5
+  path: app/valuelist
   build-parameters:
     build-result: dist
     builder: custom

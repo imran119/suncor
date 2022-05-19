@@ -18,11 +18,23 @@ entity ZEDF4_Header1: cuid {
 
 entity ZEDF4_Detail1: cuid {
     Cdgrp : Association to ZEDF4_Header1;
-    //Cdgrp:  Cdgrp;
     Code   : Code; 
     Codedsc : Codedsc;
     Codeltxt : Codeltxt;
 };
+/*
+entity ZEDF4_Header11: cuid {
+    Cdgrp : Cdgrp; 
+    Cdgrpdsc : Cdgrpdsc;
+    details  : Composition of many ZEDF4_Detail11 on details.Cdgrp = $self;
+};
+
+entity ZEDF4_Detail11: cuid {
+    Cdgrp:  Association to ZEDF4_Header11;
+    Code   : Code; 
+    Codedsc : Codedsc;
+    Codeltxt : Codeltxt;
+};*/
 
 
 
