@@ -31,3 +31,5 @@ mta_archives/
 
 # auto generated wildcard
 suncor/ZEngAssetTags/db/.env
+# auto generated wildcard
+suncor/ZEngAssetTags/.env1

@@ -8,10 +8,7 @@ annotate CatalogService.MainEntity with @(
             { Value   : Eqfnr},
             
         ]
-    }
-); 
-
-annotate CatalogService.MainEntity with @(
+    },
     UI.FieldGroup #section2         : {
         Data    : [
                 { Value :   Manuf},
@@ -20,18 +17,13 @@ annotate CatalogService.MainEntity with @(
                 { Value:    Serial},
                 { Value:    Ponum},
         ]
-    }
-);
-annotate CatalogService.MainEntity with @(
-    UI.FieldGroup #section3         : {
+    },
+     UI.FieldGroup #section3         : {
         Data    : [
                 {Value : Compdsc},
                 { Value: Prntag}
         ]
-    }
-);
-
-annotate CatalogService.MainEntity with @(
+    },
     UI.FieldGroup #flags         : {
         Data    : [
                 {Value : Lgflg},
@@ -43,9 +35,7 @@ annotate CatalogService.MainEntity with @(
                 { Value: Sceflg},
                 { Value: Future}
         ]
-    }
-);
-annotate CatalogService.MainEntity with @(
+    },
     UI.FieldGroup #HazData         : {
         Data    : [
                 {Value : Area},
@@ -57,18 +47,13 @@ annotate CatalogService.MainEntity with @(
                 { Value: Harea},
                 { Value: Ainsp}
         ]
-    }
-);
-annotate CatalogService.MainEntity with @(
+    },
     UI.FieldGroup #notiWORN         : {
         Data    : [
                 {Value : Notifn},
                 { Value: Wonum}
         ]
-    }
-);
-
-annotate CatalogService.MainEntity with @(
+    },
     UI.FieldGroup #remarks         : {
         Data    : [
                 {
@@ -76,5 +61,5 @@ annotate CatalogService.MainEntity with @(
                 }
         ]
     }
-);
+); 
 

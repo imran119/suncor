@@ -19,10 +19,7 @@ namespace edm;
 
 aspect ZENGDATA1 {
 Mandt : String(3);
-Tagno     :    String(27);
-Tgroup     :    String(30);
-Status     :    String(1);
-Tdesc     :    String(80);
+
 Area     :    String(30);
 Dlc     :    String(4);
 Disc     :    String(2);

@@ -53,6 +53,67 @@ Tagsrc @title : '{i18n>Tagsrc}';
 Vendtag @title : '{i18n>Vendtag}';
 Admrmk @title : '{i18n>Admrmk}' @UI.MultiLineText; 
 
+Cblcd @title : '{i18n>Cblcd}';
+Cblsys @title : '{i18n>Cblsys}';
+Frtag @title : '{i18n>Frtag}';
+Gld1Fr @title : '{i18n>Gld1Fr}';
+Frdwg @title : '{i18n>Frdwg}';
+Frdsc3 @title : '{i18n>Frdsc3}';
+Totag @title : '{i18n>Totag}';
+Gld1To @title : '{i18n>Gld1To}';
+Todwg @title : '{i18n>Todwg}';
+Toeqdsc @title : '{i18n>Toeqdsc}';
+Rtlen @title : '{i18n>Rtlen}';
+Lenest @title : '{i18n>Lenest}';
+
+Dlcdsc @title : '{i18n>Dlcdsc}';
+Eqprmk @title : '{i18n>Eqprmk}';
+Nderptno @title : '{i18n>Nderptno}';
+Swl @title : '{i18n>Swl}';
+Minsftr @title : '{i18n>Minsftr}';
+Tstdat @title : '{i18n>Tstdat}';
+Tstload @title : '{i18n>Tstload}';
+Mantst @title : '{i18n>Mantst}';
+Indep @title : '{i18n>Indep}';
+Wgtdry @title : '{i18n>Wgtdry}';
+
+VessCF @title : '{i18n>VessCF}';
+Dimensn @title : '{i18n>Dimensn}';
+Vestyp @title : '{i18n>Vestyp}';
+Widthdia @title : '{i18n>Widthdia}';
+Wgtopr @title : '{i18n>Wgtopr}';
+
+
+Mawp @title : '{i18n>Mawp}';
+Mawt @title : '{i18n>Mawt}';
+Mdmt @title : '{i18n>Mdmt}';
+Pressr @title : '{i18n>Pressr}';
+
+Pdes @title : '{i18n>Pdes}';
+Popr @title : '{i18n>Popr}';
+Ptst @title : '{i18n>Ptst}';
+Tdes @title : '{i18n>Tdes}';
+Topr @title : '{i18n>Topr}';
+Pvrmk @title : '{i18n>Pvrmk}';
+
+Elvolt @title : '{i18n>Elvolt}';
+Dutykw @title : '{i18n>Dutykw}';
+Elecrmk @title : '{i18n>Elecrmk}' @UI.MultiLineText;
+
+Linlgth @title : '{i18n>Linlgth}';
+Insthk @title : '{i18n>Insthk}';
+Tmpmain @title : '{i18n>Tmpmain}';
+Piphtls @title : '{i18n>Piphtls}';
+Cbltyp @title : '{i18n>Cbltyp}';
+Nopass @title : '{i18n>Nopass}';
+Operc @title : '{i18n>Operc}';
+Bkgrp @title : '{i18n>Bkgrp}';
+Heatout @title : '{i18n>Heatout}';
+Totcircl @title : '{i18n>Totcircl}';
+Inrcur @title : '{i18n>Inrcur}';
+Pwrpt @title : '{i18n>Pwrpt}';
+Htcirc @title : '{i18n>Htcirc}';
+
 }
 annotate schema.ZengData_Doc with {
 Item @title : '{i18n>Item}';

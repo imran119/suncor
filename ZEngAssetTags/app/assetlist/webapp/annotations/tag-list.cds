@@ -4,6 +4,9 @@ using from '../common/header';
 using from '../common/core-data';
 using CatalogService.MainEntity as docs from '../common/doc-xrefs';
 using from '../common/admin-data';
+using from './cables';
+using from './equip-data';
+using CatalogService.MainEntity as htc from  './heat';
 
 
 annotate CatalogService.MainEntity with @(
@@ -67,14 +70,6 @@ annotate CatalogService.MainEntity with @(
 
 annotate CatalogService.MainEntity with @( 
     UI.Facets : [
-       /* {
-            $Type   : 'UI.CollectionFacet',
-            ID      : 'CollectionFacet1',
-            Label   : 'Core Data',
-            Facets  : [
-                
-            ],
-        },*/
         {
             $Type   : 'UI.CollectionFacet',
             ID      : 'coreData',
@@ -160,5 +155,146 @@ annotate CatalogService.MainEntity with @(
                 },
             ],
         },
+        //CABLES
+        {
+            $Type   : 'UI.CollectionFacet',
+            ID      : 'cablesData',
+            Label   : '{i18n>cablesData}',
+            ![@UI.Hidden]:  cableFlag,
+            Facets  : [
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#cablesec1',
+                    Label   :  '{i18n>CableDetails}'
+                },
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#fromEquipD',
+                    Label   :  '{i18n>FromEquipDetails}'
+                },
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#toEquipD',
+                    Label   :  '{i18n>ToEquipmentDetails}'
+                },
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#lengthD',
+                    Label   :  '{i18n>LengthDetails}'
+                }
+            ],
+        },
+        //EQUIPMENT
+        {
+            $Type   : 'UI.CollectionFacet',
+            ID      : 'EquipDataId',
+            Label   : '{i18n>EquipData}',
+            ![@UI.Hidden]:  equipFlag,
+            Facets  : [
+                { 
+                    $Type   : 'UI.CollectionFacet',
+                    ID      : 'EquipDataId1',
+                    Label  :  '{i18n>Equipment}',
+                    Facets : [ 
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipDataSec1',
+                            Label  :  '{i18n>equipment}',
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipDataSec2'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipDataSec3'
+                        }
+                        
+                    ],
+                },
+                { 
+                    $Type   : 'UI.CollectionFacet',
+                    ID      : 'liftingGearCollectionId',
+                    Label  :  '{i18n>LiftingGear}',
+                    Facets : [ 
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipLG1'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipLG2'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#eqipLG3'
+                        }
+                        
+                    ],
+                },
+                { 
+                    $Type   : 'UI.CollectionFacet',
+                    ID      : 'pVesselCollectionId',
+                    Label  :  '{i18n>PressureVessel}',
+                    Facets : [ 
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#pVesselSec1'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#pVesselSec2'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#pVesselSec3'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#pVesselSec4'
+                        },
+                         {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#pVesselSec5'
+                        }
+                    ],
+                },
+                    { 
+                    $Type   : 'UI.CollectionFacet',
+                    ID      : 'electricalCollectionId',
+                    Label  :  '{i18n>Electrical}',
+                    Facets : [ 
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#electrSec1'
+                        },
+                        {
+                            $Type   : 'UI.ReferenceFacet',
+                            Target  :  '@UI.FieldGroup#electrSec2'
+                        }
+                    ]
+                }
+
+            ],
+        }, 
+        //HEAT
+        {
+            $Type   : 'UI.CollectionFacet',
+            ID      : 'heatData',
+            Label   : '{i18n>HeatData}',
+            ![@UI.Hidden]:  heatFlag,
+            Facets  : [
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#heatSec1'
+                },
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  '@UI.FieldGroup#heatSec2'
+                },
+    
+            ],
+        },
+
     ]
 );
