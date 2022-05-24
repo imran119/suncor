@@ -38,6 +38,21 @@ annotate service.AssetMain with @(
     }
 );
 /**
+    UI.PresentationVariant
+    Search-Term: #DefaultSort
+ */
+annotate service.AssetMain with @(
+    UI.PresentationVariant : {
+        SortOrder       : [ //Default sort order
+            {
+                Property    : Tagno,
+                Descending  : true,
+            },
+        ],
+        Visualizations  : ['@UI.LineItem'],
+    },
+);
+/**
     UI.SelectionFields
     Search-Term: #VisibleFilters
  */
@@ -131,50 +146,13 @@ annotate service.AssetMain with @(
                 },
             ],
         },
-        {
-            $Type   : 'UI.CollectionFacet',
-            ID      : 'docXrefs',
-            Label   : '{i18n>DocXref}',
-            Facets  : [
-                { 
-                    $Type   : 'UI.ReferenceFacet',
-                    Target  :  'docs/@UI.LineItem'
-                }
-            ],
-        },
-        {
-            $Type   : 'UI.CollectionFacet',
-            ID      : 'CollectionFacet4',
-            Label   : '{i18n>admin-data}',
-            Facets  : [
-                {
-                    $Type   : 'UI.ReferenceFacet',
-                    Target  : '@UI.FieldGroup#adminsec1',
-                    ID      :  'adminsec1'
-                },
-                {
-                    $Type   : 'UI.ReferenceFacet',
-                    Target  : '@UI.FieldGroup#adminsec2',
-                    ID      :  'adminsec2'
-                },
-                {
-                    $Type   : 'UI.ReferenceFacet',
-                    Target  : '@UI.FieldGroup#adminsec3',
-                    ID      :  'adminsec3'
-                },
-                {
-                    $Type   : 'UI.ReferenceFacet',
-                    Target  : '@UI.FieldGroup#adminsec4',
-                    ID      :  'adminsec4'
-                },
-            ],
-        },
+       
         //CABLES
         {
             $Type   : 'UI.CollectionFacet',
             ID      : 'cablesData',
             Label   : '{i18n>cablesData}',
-            ![@UI.Hidden]:  cableFlag,
+            ![@UI.Hidden]:  Cables,
             Facets  : [
                 { 
                     $Type   : 'UI.ReferenceFacet',
@@ -203,7 +181,7 @@ annotate service.AssetMain with @(
             $Type   : 'UI.CollectionFacet',
             ID      : 'EquipDataId',
             Label   : '{i18n>EquipData}',
-            ![@UI.Hidden]:  equipFlag,
+            ![@UI.Hidden]:  Equipment,
             Facets  : [
                 { 
                     $Type   : 'UI.CollectionFacet',
@@ -296,7 +274,7 @@ annotate service.AssetMain with @(
             $Type   : 'UI.CollectionFacet',
             ID      : 'heatData',
             Label   : '{i18n>HeatData}',
-            ![@UI.Hidden]:  heatFlag,
+            ![@UI.Hidden]:  Heat,
             Facets  : [
                 { 
                     $Type   : 'UI.ReferenceFacet',
@@ -314,7 +292,7 @@ annotate service.AssetMain with @(
             $Type   : 'UI.CollectionFacet',
             ID      : 'instrumentDataId',
             Label   : '{i18n>InstrumentsData}',
-            ![@UI.Hidden]:  equipFlag,
+            ![@UI.Hidden]:  Instruments,
             Facets  : [
                 { 
                     $Type   : 'UI.CollectionFacet',
@@ -411,6 +389,7 @@ annotate service.AssetMain with @(
             $Type   : 'UI.CollectionFacet',
             ID      : 'lineDataID',
             Label   : '{i18n>LineData}',
+            ![@UI.Hidden]:  Lines,
             Facets  : [
                 { 
                     $Type   : 'UI.ReferenceFacet',
@@ -429,6 +408,44 @@ annotate service.AssetMain with @(
                     Target  :  '@UI.FieldGroup#lineDSec4'
                 },
     
+            ],
+        },
+         {
+            $Type   : 'UI.CollectionFacet',
+            ID      : 'docXrefs',
+            Label   : '{i18n>DocXref}',
+            Facets  : [
+                { 
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  :  'docs/@UI.LineItem'
+                }
+            ],
+        },
+        {
+            $Type   : 'UI.CollectionFacet',
+            ID      : 'CollectionFacet4',
+            Label   : '{i18n>admin-data}',
+            Facets  : [
+                {
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  : '@UI.FieldGroup#adminsec1',
+                    ID      :  'adminsec1'
+                },
+                {
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  : '@UI.FieldGroup#adminsec2',
+                    ID      :  'adminsec2'
+                },
+                {
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  : '@UI.FieldGroup#adminsec3',
+                    ID      :  'adminsec3'
+                },
+                {
+                    $Type   : 'UI.ReferenceFacet',
+                    Target  : '@UI.FieldGroup#adminsec4',
+                    ID      :  'adminsec4'
+                },
             ],
         },
 

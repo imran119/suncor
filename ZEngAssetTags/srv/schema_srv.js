@@ -2,30 +2,43 @@ const cds = require("@sap/cds");
 
 
 module.exports = async (srv) => {
-    const {MainEntity, ZEngCLEntity} = srv.entities;
-    srv.after(["READ"],MainEntity, async (response) => {
-       // console.log('after');
+    const {AssetMain} = srv.entities;
+    srv.after(["READ"],AssetMain, async (response) => {
         if(!response) return;
-       /* if(response.Tgroup == "
-       Equipment") {
-            response.cableFlag = true;
-            response.heatFlag = true;
-        } */
+        if(!response.length)
+            enableTagGroup(response.Tgroup, response);
     });
-    srv.after(["READ"],ZEngCLEntity, async (response) => {
-       // console.log('ZEngCLEntity' + JSON.stringify(response));
-        if(!response) return;
-      
-    }); 
 };
-
-async function enableTagGroup(tGroup, rsp) {
-    let tGroups = [Equipment, Cables, Heat];
-    for(let i = 0; i < tGroups; i++) {
-        if(tGroups[i] == tGroup) {
-            rsp.tGroups[i] = true;
-        } else {
-            rsp.tGroups[i] = false;            
-        }
+ function enableTagGroup(tGroup, res) {
+    if(tGroup == "Equipment") {
+        res.Equipment=false;
+        toggleEQTGroups(res, true);
+    } else if(tGroup == "Cables"){
+        res.Cables=false;
+        toggleCABTGroups(res, true);
+    } else if(tGroup == "Heat"){
+        res.Heat=false;
+        toggleHTTGroups(res, true);
+    } else if(tGroup == "Instruments"){
+        res.Instruments=false;
+        toggleINTTGroups(res, true);
+    } else if(tGroup == "Lines"){
+        res.Instruments=false;
+        toggleLINTGroups(res, true);
     }
+}
+function toggleEQTGroups(res, aFlag) {
+    res.Cables = aFlag; res.Lines = aFlag; res.Heat = aFlag; res.Instruments = aFlag;
+}
+function toggleCABTGroups(res, aFlag) {
+    res.Equipment = aFlag; res.Lines = aFlag; res.Heat = aFlag; res.Instruments = aFlag;
+}
+function toggleHTTGroups(res, aFlag) {
+    res.Cables = aFlag; res.Lines = aFlag; res.Equipment = aFlag; res.Instruments = aFlag;
+}
+function toggleLINTGroups(res, aFlag) {
+    res.Cables = aFlag; res.Equipment = aFlag; res.Heat = aFlag; res.Instruments = aFlag;
+}
+function toggleINTTGroups(res, aFlag) {
+    res.Cables = aFlag; res.Lines = aFlag; res.Heat = aFlag; res.Equipment = aFlag;
 }

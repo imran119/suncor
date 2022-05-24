@@ -2,7 +2,7 @@
 namespace edm; 
 
 using { managed, cuid, sap, sap.common.CodeList } from '@sap/cds/common';
-using {edm.ZENGDATA1, edm.ZENGDATA2, edm.ZENGDATA3, edm.ZENGDATA4,  edm.ZENGDATA5,  edm.ZENGDATA6,  edm.ZENGDATA7,  edm.ZENGDATA8,  edm.ZENGDATA9} from './common';
+using {edm.ZENGDATA1, edm.ZENGDATA2, edm.ZENGDATA3, edm.ZENGDATA4,  edm.ZENGDATA5,  edm.ZENGDATA6,  edm.ZENGDATA7,  edm.ZENGDATA8,  edm.ZENGDATA9, edm.VirtualFlags} from './common';
 type Cdgrp     :    String(15);
 type Code     :    Integer;
 type Codedsc     : String(120);
@@ -55,7 +55,7 @@ entity ZengMain:  cuid, ZENGDATA1,ZENGDATA2, ZENGDATA3, ZENGDATA4, ZENGDATA5, ZE
 
 };
 
-entity AssetMain:  cuid, ZENGDATA1, ZENGDATA2, ZENGDATA3, ZENGDATA4, ZENGDATA5, ZENGDATA6, ZENGDATA7, ZENGDATA8, ZENGDATA9 {
+entity AssetMain:  cuid, ZENGDATA1, ZENGDATA2, ZENGDATA3, ZENGDATA4, ZENGDATA5, ZENGDATA6, ZENGDATA7, ZENGDATA8, ZENGDATA9, VirtualFlags {
     Tagno       :    String(27);
     Tgroup      :    String(30);
     Status      :    String;
@@ -66,9 +66,6 @@ entity AssetMain:  cuid, ZENGDATA1, ZENGDATA2, ZENGDATA3, ZENGDATA4, ZENGDATA5, 
     revs        :    Composition of many AssetMain_Rev on revs.Tagno = $self;
     nts         :    Composition of many AssetMain_Nts on nts.Tagno = $self;
     htc         :    Composition of many AssetMain_Htc on htc.Tagno = $self;
-    virtual    cableFlag  : Boolean;
-    virtual    equipFlag  : Boolean;
-    virtual    heatFlag  : Boolean;
 
 };
 entity AssetMain_Doc: cuid {

@@ -14,6 +14,18 @@
             "id": "@sap-ux/fiori-elements-writer:lrop",
             "version": "0.3.0"
         },
+        "crossNavigation": {
+            "inbounds": {
+              "assettags-display": {
+                "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+                },
+                "semanticObject": "assettags",
+                "action": "display"
+              }
+            }
+        },
         "dataSources": {
             "mainService": {
                 "uri": "/catalog/",

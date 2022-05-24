@@ -28,6 +28,30 @@ annotate CatalogService.F4_Header with @(
     ],
 );
 
+/**
+    UI.PresentationVariant
+ */
+annotate CatalogService.F4_Detail with @(
+    UI.PresentationVariant : {
+        SortOrder       : [
+            {
+                Property    : Code,
+                Descending  : true,
+            },
+        ],
+        Visualizations  : ['@UI.LineItem'],
+    },
+);
+annotate CatalogService.F4_Header with @(
+    UI.PresentationVariant : {
+        SortOrder       : [
+            {
+                Property    : Cdgrp,
+                Descending  : false,
+            },
+        ]
+    },
+);
 annotate CatalogService.F4_Header with @(
     UI.HeaderInfo :{
         TypeName        : 'Code Group',

@@ -22,12 +22,18 @@ entity ZEngCodeList: cuid {
     Codeltxt : String(190);
 };
 
+aspect VirtualFlags {
+    virtual Equipment                : Boolean;
+    virtual Cables                   : Boolean;
+    virtual Heat                      : Boolean;
+    virtual Instruments                 : Boolean;
+    virtual Lines                      : Boolean;
+}
 
 aspect ZENGDATA1 {
 Mandt : String(3);
 Area     :    String(30);
 Dlc     :    String;
-
 Fissue     :    String(15);
 Hosign     :    String(10);
 Impdat     :    DateTime;

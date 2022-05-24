@@ -85,7 +85,6 @@
             "css": []
         },
         "routing": {
-            "config": {},
             "routes": [
                 {
                     "pattern": ":?query:",
@@ -116,6 +115,28 @@
                                 "MainEntity": {
                                     "detail": {
                                         "route": "MainEntityObjectPage"
+                                    }
+                                }
+                            },
+                            "initialLoad": true,
+                            "showCounts": true,
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "ResponsiveTable",
+                                        "selectionMode": "Multi",
+                                        "quickVariantSelection": {
+                                            "paths": [
+                                                {
+                                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#variant1"
+                                                },
+                                                {
+                                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#variant2"
+                                                }
+                                            ],
+                                            "hideTableTitle": true,
+                                            "showCounts": true
+                                        }
                                     }
                                 }
                             }
