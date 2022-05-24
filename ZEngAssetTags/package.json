@@ -21,7 +21,9 @@
         "build": "cds build/all --clean;cp gen/srv/srv/csn.json srv/gen/;cp -r gen/db/src/gen db/src",
         "watch-assetlist": "cds watch --open assetlist/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
         "undeploy": "cf undeploy ZEngAssetTags --delete-services --delete-service-keys",
-        "watch-valuelist": "cds watch --open valuelist/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4"
+        "watch-valuelist": "cds watch --open valuelist/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
+        "watch-zengassettags": "cds watch --open zengassettags/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
+        "watch-assetmainapp": "cds watch --open assetmainapp/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -76,6 +78,8 @@
     },
     "sapux": [
         "app/assetlist",
-        "app/valuelist"
+        "app/valuelist",
+        "app/zengassettags",
+        "app/assetmainapp"
     ]
 }

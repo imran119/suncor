@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="CatalogService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="MainEntity" EntityType="CatalogService.MainEntity">
+                    <NavigationPropertyBinding Path="docs" Target="ZengData_Doc"/>
+                    <NavigationPropertyBinding Path="lin" Target="ZengData_Lin"/>
+                    <NavigationPropertyBinding Path="revs" Target="ZenData_Rev"/>
+                    <NavigationPropertyBinding Path="nts" Target="ZengData_Nts"/>
+                    <NavigationPropertyBinding Path="htc" Target="ZenData_Htc"/>
+                </EntitySet>
+                <EntitySet Name="F4_Header" EntityType="CatalogService.F4_Header">
+                    <NavigationPropertyBinding Path="details" Target="F4_Detail"/>
+                </EntitySet>
+                <EntitySet Name="F4_Detail" EntityType="CatalogService.F4_Detail"/>
+                <EntitySet Name="AssetMain" EntityType="CatalogService.AssetMain">
+                    <NavigationPropertyBinding Path="docs" Target="AssetMain_Doc"/>
+                </EntitySet>
+                <EntitySet Name="Disc_Cl" EntityType="CatalogService.Disc_Cl"/>
+                <EntitySet Name="Phtyp_Cl" EntityType="CatalogService.Phtyp_Cl"/>
+                <EntitySet Name="Dlc_Cl" EntityType="CatalogService.Dlc_Cl"/>
+                <EntitySet Name="Supply_Cl" EntityType="CatalogService.Supply_Cl"/>
+                <EntitySet Name="Ponum_Cl" EntityType="CatalogService.Ponum_Cl"/>
+                <EntitySet Name="Prntag_Cl" EntityType="CatalogService.Prntag_Cl"/>
+                <EntitySet Name="Lgflg_Cl" EntityType="CatalogService.Lgflg_Cl"/>
+                <EntitySet Name="Pvflg_Cl" EntityType="CatalogService.Pvflg_Cl"/>
+                <EntitySet Name="Silvl_Cl" EntityType="CatalogService.Silvl_Cl"/>
+                <EntitySet Name="Vlvflg_Cl" EntityType="CatalogService.Vlvflg_Cl"/>
+                <EntitySet Name="Hazflg_Cl" EntityType="CatalogService.Hazflg_Cl"/>
+                <EntitySet Name="Future_Cl" EntityType="CatalogService.Future_Cl"/>
+                <EntitySet Name="Area_Cl" EntityType="CatalogService.Area_Cl"/>
+                <EntitySet Name="Iscirc_Cl" EntityType="CatalogService.Iscirc_Cl"/>
+                <EntitySet Name="Sapb_Cl" EntityType="CatalogService.Sapb_Cl"/>
+                <EntitySet Name="Xissue_cl" EntityType="CatalogService.Xissue_cl"/>
+                <EntitySet Name="Fissue_Cl" EntityType="CatalogService.Fissue_Cl"/>
+                <EntitySet Name="Itag_Cl" EntityType="CatalogService.Itag_Cl"/>
+                <EntitySet Name="Impdat_Cl" EntityType="CatalogService.Impdat_Cl"/>
+                <EntitySet Name="Hosign_Cl" EntityType="CatalogService.Hosign_Cl"/>
+                <EntitySet Name="Doctyp_Cl" EntityType="CatalogService.Doctyp_Cl"/>
+                <EntitySet Name="Tstdat_Cl" EntityType="CatalogService.Tstdat_Cl"/>
+                <EntitySet Name="Vestyp_Cl" EntityType="CatalogService.Vestyp_Cl"/>
+                <EntitySet Name="Pwrpt_Cl" EntityType="CatalogService.Pwrpt_Cl"/>
+                <EntitySet Name="Inscls_Cl" EntityType="CatalogService.Inscls_Cl"/>
+                <EntitySet Name="Fail_Cl" EntityType="CatalogService.Fail_Cl"/>
+                <EntitySet Name="Ioloc_Cl" EntityType="CatalogService.Ioloc_Cl"/>
+                <EntitySet Name="Iosigo_Cl" EntityType="CatalogService.Iosigo_Cl"/>
+                <EntitySet Name="Iosigs_Cl" EntityType="CatalogService.Iosigs_Cl"/>
+                <EntitySet Name="Iosigt_Cl" EntityType="CatalogService.Iosigt_Cl"/>
+                <EntitySet Name="Iotyp_Cl" EntityType="CatalogService.Iotyp_Cl"/>
+                <EntitySet Name="Firezn_Cl" EntityType="CatalogService.Firezn_Cl"/>
+                <EntitySet Name="Linesz_Cl" EntityType="CatalogService.Linesz_Cl"/>
+                <EntitySet Name="Pipspec_Cl" EntityType="CatalogService.Pipspec_Cl"/>
+                <EntitySet Name="Htcirc_Cl" EntityType="CatalogService.Htcirc_Cl"/>
+                <EntitySet Name="Frtag_Cl" EntityType="CatalogService.Frtag_Cl"/>
+                <EntitySet Name="Totag_Cl" EntityType="CatalogService.Totag_Cl"/>
+                <EntitySet Name="Cblco_Cl" EntityType="CatalogService.Cblco_Cl"/>
+                <EntitySet Name="Cblsys_Cl" EntityType="CatalogService.Cblsys_Cl"/>
+                <EntitySet Name="Gldfrom_Cl" EntityType="CatalogService.Gldfrom_Cl"/>
+                <EntitySet Name="Gldto_Cl" EntityType="CatalogService.Gldto_Cl"/>
+                <EntitySet Name="Jbno_Cl" EntityType="CatalogService.Jbno_Cl"/>
+                <EntitySet Name="Radome_Cl" EntityType="CatalogService.Radome_Cl"/>
+                <EntitySet Name="Scaffold_Cl" EntityType="CatalogService.Scaffold_Cl"/>
+                <EntitySet Name="Cbltyp_Cl" EntityType="CatalogService.Cbltyp_Cl"/>
+                <EntitySet Name="Modult_Cl" EntityType="CatalogService.Modult_Cl"/>
+                <EntitySet Name="Cvbld_Cl" EntityType="CatalogService.Cvbld_Cl"/>
+                <EntitySet Name="Lckdv_Cl" EntityType="CatalogService.Lckdv_Cl"/>
+                <EntitySet Name="Matls_Cl" EntityType="CatalogService.Matls_Cl"/>
+                <EntitySet Name="Soursrv_Cl" EntityType="CatalogService.Soursrv_Cl"/>
+                <EntitySet Name="Ndepfor_Cl" EntityType="CatalogService.Ndepfor_Cl"/>
+                <EntitySet Name="Ndepcas_Cl" EntityType="CatalogService.Ndepcas_Cl"/>
+                <EntitySet Name="Accpfor_Cl" EntityType="CatalogService.Accpfor_Cl"/>
+                <EntitySet Name="Accpcas_Cl" EntityType="CatalogService.Accpcas_Cl"/>
+                <EntitySet Name="Torqt_Cl" EntityType="CatalogService.Torqt_Cl"/>
+                <EntitySet Name="Paint_Cl" EntityType="CatalogService.Paint_Cl"/>
+                <EntitySet Name="Cmainp_Cl" EntityType="CatalogService.Cmainp_Cl"/>
+                <EntitySet Name="Cpressp_Cl" EntityType="CatalogService.Cpressp_Cl"/>
+                <EntitySet Name="Pleak_Cl" EntityType="CatalogService.Pleak_Cl"/>
+                <EntitySet Name="Firect_Cl" EntityType="CatalogService.Firect_Cl"/>
+                <EntitySet Name="Chart_Cl" EntityType="CatalogService.Chart_Cl"/>
+                <EntitySet Name="Note_Cl" EntityType="CatalogService.Note_Cl"/>
+                <EntitySet Name="Typgen_Cl" EntityType="CatalogService.Typgen_Cl"/>
+                <EntitySet Name="Critical_Cl" EntityType="CatalogService.Critical_Cl"/>
+                <EntitySet Name="Status_Cl" EntityType="CatalogService.Status_Cl"/>
+                <EntitySet Name="Tagroup_Cl" EntityType="CatalogService.Tagroup_Cl"/>
+                <EntitySet Name="ZengData_Doc" EntityType="CatalogService.ZengData_Doc">
+                    <NavigationPropertyBinding Path="Tagno" Target="MainEntity"/>
+                </EntitySet>
+                <EntitySet Name="ZengData_Lin" EntityType="CatalogService.ZengData_Lin">
+                    <NavigationPropertyBinding Path="Tagno" Target="MainEntity"/>
+                </EntitySet>
+                <EntitySet Name="ZenData_Rev" EntityType="CatalogService.ZenData_Rev">
+                    <NavigationPropertyBinding Path="Tagno" Target="MainEntity"/>
+                </EntitySet>
+                <EntitySet Name="ZengData_Nts" EntityType="CatalogService.ZengData_Nts">
+                    <NavigationPropertyBinding Path="Tagno" Target="MainEntity"/>
+                </EntitySet>
+                <EntitySet Name="ZenData_Htc" EntityType="CatalogService.ZenData_Htc">
+                    <NavigationPropertyBinding Path="Tagno" Target="MainEntity"/>
+                </EntitySet>
+                <EntitySet Name="AssetMain_Doc" EntityType="CatalogService.AssetMain_Doc">
+                    <NavigationPropertyBinding Path="Tagno" Target="AssetMain"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="MainEntity">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Mandt" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Area" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Dlc" Type="Edm.String"/>
+                <Property Name="Fissue" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Hosign" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Impdat" Type="Edm.DateTimeOffset"/>
+                <Property Name="Itag" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Licexp" Type="Edm.DateTimeOffset"/>
+                <Property Name="Ponum" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sapb" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Tagrev" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Tagsrc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vendtag" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Xissue" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Ainsp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Apbdy" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gsgrp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Harea" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Indep" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Mantst" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Protcl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Linesz" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Rapid" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Typgen" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vlvend" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Wgtdry" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Future" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Hazflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ingrs" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Lgflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Manuf" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Notifn" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Model" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Prtnum" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pvflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ppid" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Prmthd" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sapflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Serial" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Suppl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vlvflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Wonum" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Lah" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lahh" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lal" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lall" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Alhg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Alhg2" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Alhh" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Allw" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Allwl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Alinh" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Alst" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Ctrlact" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Ctrlfl" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Elfrq" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Elphs" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Elvolt" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Engu" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Eqlin" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Fail" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Flow" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Fluid" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Ftag" Type="Edm.String" MaxLength="14"/>
+                <Property Name="Grphc" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Hmyid" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Iocirc" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ioelec" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ioloc" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Iolpc" Type="Edm.String" MaxLength="11"/>
+                <Property Name="Iopwr" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Iosrv" Type="Edm.String" MaxLength="16"/>
+                <Property Name="Iosrv2" Type="Edm.String" MaxLength="16"/>
+                <Property Name="Iosigd" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Iosigs" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Iosigt" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Iotyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Inflp" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Inhovr" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Inhib" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Iscirc" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Log0" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Log1" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Macro" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pcucab" Type="Edm.String" MaxLength="14"/>
+                <Property Name="Pcumod" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Pcumod2" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Pcunod" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Pcuslv" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Pcuslvc" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Pcuslv2" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Phse" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Pidtyp" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Pdes" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Pdesmx" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Pdesmx2" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Pdesmin" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Popr" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Poprmx" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Poprmn" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Pulse" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Range" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Revlvl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Scmpod" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Spt" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Spt2" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Sptflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Sioff" Type="Edm.Decimal" Scale="2" Precision="17"/>
+                <Property Name="Siplca" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Siplcb" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Siplcrf" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Siplcrg" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Siscl" Type="Edm.Decimal" Scale="2" Precision="9"/>
+                <Property Name="Sigspn" Type="Edm.String" MaxLength="14"/>
+                <Property Name="Sigzr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Srdflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Tcls" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tdesmx" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Tdesmx2" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Tdesmn" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Tdesmn2" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Topr" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Toprmx" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Toprmn" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Toprnr" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Tquad" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Tcbl" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Tequip" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Tpair" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Tpair2" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Tblk1" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Tblk2" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Tblk3" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Tblk4" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Trend" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Turef" Type="Edm.String" MaxLength="16"/>
+                <Property Name="Tutrm1" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Tutrm2" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Tuxw1" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tuxw2" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vestyp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Xmast" Type="Edm.String" MaxLength="6"/>
+                <Property Name="C99Cmt" Type="Edm.String" MaxLength="255"/>
+                <Property Name="C99Vsd" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Cblcd" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cbldsc" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Cnoref" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Deldc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Deldf" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Fabarea" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Fldcbl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frtag" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frloc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frdsc3" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Gld1Fr" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gld1To" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gldfr" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gldto" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Hucd" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Jbno" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Lencld" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="Lenest" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="Sidir" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Silvl" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Cblno" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Cblsz" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Ltare" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="Matl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Quant" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Rtlen" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Rtsch" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Szco" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Stidjb" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Systm" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Tstruce" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Tstdat" Type="Edm.DateTimeOffset"/>
+                <Property Name="Voltge" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Insthk" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Inscls" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Linins" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Ndecls" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Ndtcls" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Ndprs" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Ndtmp" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Ptcls" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pipspec" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Poprnr" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Ptst" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Totag" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frdwg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frnod" Type="Edm.Decimal" Scale="0" Precision="7"/>
+                <Property Name="Pscd" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Nocbls" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Rotst" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Toloc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Todwg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tonod" Type="Edm.Decimal" Scale="0" Precision="7"/>
+                <Property Name="Pid" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Grmt1" Type="Edm.Decimal" Scale="0" Precision="1"/>
+                <Property Name="Grmt2" Type="Edm.Decimal" Scale="0" Precision="1"/>
+                <Property Name="Bkgrp" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Cbltyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Dscint" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Inrcur" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Islyt" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Istand" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Tckits" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Tstats" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Operc" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Phup" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pwrdist" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Temptr" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Tracel" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Tubing" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Instyp" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Isosht" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Nopass" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Notape" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Nothreq" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Pdmsp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Pipedi" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Pipiso" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Pwrpt" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ptsht" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tmpmain" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Thermo" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Totcircl" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Antcon" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Antgn" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Antlen" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Antmod" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Antptn" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Antrtg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Anttun" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Antvert" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Bumed" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Battyp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Cmodif" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Dskstg" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Dsply" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Freqrng" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Gyro" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Impdnce" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Isratg" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Lanfib" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Lanspd" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Lifeobs" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Majalm" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Mattyp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Minalm" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Modult" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Noport" Type="Edm.Decimal" Scale="0" Precision="3"/>
+                <Property Name="Nochnls" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Nompwr" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="Pwrprim" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pwrsec" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Prnter" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Procr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Radlicn" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Radome" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Recsens" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Scaffold" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Softwver" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Spkrst" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Spkrtaw" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Spkrtyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Stdwv" Type="Edm.Decimal" Scale="2" Precision="3"/>
+                <Property Name="Supct" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Supcname" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Supcph" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Supven" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Trnslin" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Awline" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Calcsht" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Capcl" Type="Edm.Decimal" Scale="2" Precision="10"/>
+                <Property Name="Catref" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Szminst" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Dimensn" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Dclosetyp" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Dgasktyp" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Dhngtyp" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Docktyp" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Dopentyp" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Dstoptyp" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Dutykw" Type="Edm.Decimal" Scale="2" Precision="9"/>
+                <Property Name="Dwsect" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Easting" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Easttp" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Firezn" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Fgerat" Type="Edm.String" MaxLength="35"/>
+                <Property Name="Handwhl" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Hazcertstd" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Haztyp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Heattrc" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Hghtovl" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Indxlift" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Lgthovl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Loopcurr" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Looptmpt" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Looptyp" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Nderptno" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Northg" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Northtp" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Padeye" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Stdidins" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tstload" Type="Edm.Decimal" Scale="2" Precision="9"/>
+                <Property Name="Typcirc" Type="Edm.String" MaxLength="16"/>
+                <Property Name="Upping" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Uppingtp" Type="Edm.String" MaxLength="7"/>
+                <Property Name="Wgtqualf" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Wgtopr" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Widthdia" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tubthick" Type="Edm.Decimal" Scale="2" Precision="3"/>
+                <Property Name="Compdsc" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Dlcdsc" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Prntag" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Sched" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Nocondt" Type="Edm.Decimal" Scale="0" Precision="2"/>
+                <Property Name="Toeqdsc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Schlen" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Sztub" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pttcsp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tdes" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Ttype" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Amplf" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Exrtg" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Emgint" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Lifebt" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Met" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Svendnm" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Scont" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Maintcontr" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Scontphn" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Rpwrant" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Transll" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Vswr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Supvolt" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Ctrfreq" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Remts" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Gmdss" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Rtnloss" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Supphse" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Pwrout" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Bandw" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Rvspwr" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Racktag" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Memry" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Netwid" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Dispmod" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Entertn" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Opersys" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Speed" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Netcnt" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Turnu" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Gain" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Pattrn" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Tunmod" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Contyp" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Windrtg" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Vbeamw" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Hbeamw" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Corermk" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Service" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Inlet" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Inlsz" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Inldia" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Inltyp" Type="Edm.String" MaxLength="90"/>
+                <Property Name="Admrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Eqprmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Liftrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Pvrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Elecrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Instrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Ctlrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Almrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl1" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl2" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl3" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl4" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl5" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Cbl6" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Inlpipe" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Outsz" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Outdia" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Outtyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Outpipe" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Outlet" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Clarif1" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Clarif2" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Clarif3" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Clarif4" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Vlvrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Oempart" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Matnr" Type="Edm.String" MaxLength="18"/>
+                <Property Name="Equnr" Type="Edm.String" MaxLength="18"/>
+                <Property Name="Tplnr" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Oemact" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Wgtact" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Dimact" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Manact" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Cdstmp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Cldsprs" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Flowcap" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Insul" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Orif" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Tstmed" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sys" Type="Edm.Decimal" Scale="0" Precision="4"/>
+                <Property Name="Subsys" Type="Edm.Decimal" Scale="0" Precision="4"/>
+                <Property Name="Prepop" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sheetno" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Prepress" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Recertd" Type="Edm.DateTimeOffset"/>
+                <Property Name="Psvrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Htcirc" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Minsftr" Type="Edm.Decimal" Scale="0" Precision="2"/>
+                <Property Name="Conscd" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Regno" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Mawp" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Pressr" Type="Edm.Decimal" Scale="2" Precision="7"/>
+                <Property Name="Mawt" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Mdmt" Type="Edm.Decimal" Scale="2" Precision="5"/>
+                <Property Name="Altcbl" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Cblrtg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Frmjb" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Tojb" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Lsmk" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Lhal" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Bendr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Jackt" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Shldtyp" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Twistdp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Termtyp1" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Termtyp2" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Purg" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Quant2" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Spare1" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Spare2" Type="Edm.Decimal" Scale="0" Precision="6"/>
+                <Property Name="Dettyp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gasdet" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Calgs" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Losdis" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Intcsys" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Insrng" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Indic" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Prcon" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Capsls" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Thinr" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Swdead" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Caplgth" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Udimen" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Hmatl" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Manifold" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Flwrt" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Flvel" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Viscos" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Spgrav" Type="Edm.Decimal" Scale="2" Precision="4"/>
+                <Property Name="Sceflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Linlgth" Type="Edm.Decimal" Scale="1" Precision="4"/>
+                <Property Name="Piphtls" Type="Edm.Decimal" Scale="1" Precision="4"/>
+                <Property Name="Heatout" Type="Edm.Decimal" Scale="1" Precision="4"/>
+                <Property Name="Tktag1" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Tktag2" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Phtyp" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Httag" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Swl" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Unid" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sptpsv" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Equnrpsv" Type="Edm.String" MaxLength="18"/>
+                <Property Name="Cblsys" Type="Edm.Int32"/>
+                <Property Name="Fromrmk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Tormk" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Schem" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Sktag" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Vlvbor" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Destd" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Eqped" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Opert" Type="Edm.String" MaxLength="115"/>
+                <Property Name="Cvbld" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Slinj" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Lckdv" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Matls" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Bdbncv" Type="Edm.String" MaxLength="115"/>
+                <Property Name="Smtrpn" Type="Edm.String" MaxLength="75"/>
+                <Property Name="Obgtbl" Type="Edm.String" MaxLength="110"/>
+                <Property Name="Stinsr" Type="Edm.String" MaxLength="125"/>
+                <Property Name="Sprgs" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gaskts" Type="Edm.String" MaxLength="62"/>
+                <Property Name="Seals" Type="Edm.String" MaxLength="42"/>
+                <Property Name="Stpkng" Type="Edm.String" MaxLength="62"/>
+                <Property Name="Boltng" Type="Edm.String" MaxLength="42"/>
+                <Property Name="Firesf" Type="Edm.String" MaxLength="60"/>
+                <Property Name="Antist" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Soursrv" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ndepfor" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ndepcas" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Accpcas" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Accpfor" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Hydshl" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Hydst" Type="Edm.String" MaxLength="70"/>
+                <Property Name="Lowst" Type="Edm.String" MaxLength="70"/>
+                <Property Name="Hghst" Type="Edm.String" MaxLength="45"/>
+                <Property Name="Hghsl" Type="Edm.String" MaxLength="45"/>
+                <Property Name="Backt" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Torqt" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Paint" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Pleak" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Firet" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Chart" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Dpress" Type="Edm.String" MaxLength="24"/>
+                <Property Name="Typgna" Type="Edm.String" MaxLength="1"/>
+                <Property Name="Altman" Type="Edm.String" MaxLength="35"/>
+                <Property Name="Altpno" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Altstk" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cmainp" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Cpressp" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Origdsht" Type="Edm.String" MaxLength="27"/>
+                <Property Name="Servc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Othdoc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Vdesc" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Pipcls" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Eqfnr" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Critical" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Tagno" Type="Edm.String" MaxLength="27"/>
+                <Property Name="Tgroup" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Status" Type="Edm.String"/>
+                <Property Name="Disc" Type="Edm.String"/>
+                <Property Name="Tdesc" Type="Edm.String" MaxLength="80"/>
+                <NavigationProperty Name="docs" Type="Collection(CatalogService.ZengData_Doc)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="lin" Type="Collection(CatalogService.ZengData_Lin)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="revs" Type="Collection(CatalogService.ZenData_Rev)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="nts" Type="Collection(CatalogService.ZengData_Nts)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="htc" Type="Collection(CatalogService.ZenData_Htc)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <Property Name="cableFlag" Type="Edm.Boolean"/>
+                <Property Name="equipFlag" Type="Edm.Boolean"/>
+                <Property Name="heatFlag" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="F4_Header">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <NavigationProperty Name="details" Type="Collection(CatalogService.F4_Detail)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="F4_Detail">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="AssetMain">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Mandt" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Area" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Dlc" Type="Edm.String"/>
+                <Property Name="Fissue" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Hosign" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Impdat" Type="Edm.DateTimeOffset"/>
+                <Property Name="Itag" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Licexp" Type="Edm.DateTimeOffset"/>
+                <Property Name="Ponum" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sapb" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Tagrev" Type="Edm.String" MaxLength="2"/>
+                <Property Name="Tagsrc" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vendtag" Type="Edm.String" MaxLength="25"/>
+                <Property Name="Xissue" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Ainsp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Apbdy" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Gsgrp" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Harea" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Indep" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Mantst" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Protcl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Linesz" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Rapid" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Typgen" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vlvend" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Wgtdry" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Future" Type="Edm.String" MaxLength="6"/>
+                <Property Name="Hazflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ingrs" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Lgflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Manuf" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Notifn" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Model" Type="Edm.String" MaxLength="255"/>
+                <Property Name="Prtnum" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Pvflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Ppid" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Prmthd" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Sapflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Serial" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Suppl" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Vlvflg" Type="Edm.String" MaxLength="4"/>
+                <Property Name="Wonum" Type="Edm.String" MaxLength="8"/>
+                <Property Name="Lah" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lahh" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lal" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Lall" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Alhg" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Alhg2" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Tagno" Type="Edm.String" MaxLength="27"/>
+                <Property Name="Tgroup" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Status" Type="Edm.String"/>
+                <Property Name="Disc" Type="Edm.String"/>
+                <Property Name="Tdesc" Type="Edm.String" MaxLength="80"/>
+                <NavigationProperty Name="docs" Type="Collection(CatalogService.AssetMain_Doc)" Partner="Tagno">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Disc_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Phtyp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Dlc_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Supply_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Ponum_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Prntag_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Lgflg_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Pvflg_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Silvl_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Vlvflg_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Hazflg_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Future_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Area_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Iscirc_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Sapb_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Xissue_cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Fissue_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Itag_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Impdat_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Hosign_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Doctyp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Tstdat_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Vestyp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Pwrpt_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Inscls_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Fail_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Ioloc_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Iosigo_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Iosigs_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Iosigt_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Iotyp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Firezn_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Linesz_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Pipspec_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Htcirc_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Frtag_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Totag_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cblco_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cblsys_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Gldfrom_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Gldto_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Jbno_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Radome_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Scaffold_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cbltyp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Modult_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cvbld_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Lckdv_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Matls_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Soursrv_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Ndepfor_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Ndepcas_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Accpfor_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Accpcas_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Torqt_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Paint_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cmainp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Cpressp_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Pleak_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Firect_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Chart_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Note_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Typgen_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Critical_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Status_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="Tagroup_Cl">
+                <Property Name="ID" Type="Edm.Guid"/>
+                <Property Name="Cdgrp" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Cdgrpdsc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Cdgrp_ID" Type="Edm.Guid"/>
+                <Property Name="Code" Type="Edm.Int32"/>
+                <Property Name="Codedsc" Type="Edm.String" MaxLength="120"/>
+                <Property Name="Codeltxt" Type="Edm.String" MaxLength="190"/>
+            </EntityType>
+            <EntityType Name="ZengData_Doc">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Mandt" Type="Edm.String" MaxLength="3"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.MainEntity" Partner="docs">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Item" Type="Edm.Int32"/>
+                <Property Name="Docno" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Doctyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Doctitle" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Comnt" Type="Edm.String" MaxLength="40"/>
+            </EntityType>
+            <EntityType Name="ZengData_Lin">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.MainEntity" Partner="lin">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Etno" Type="Edm.String" MaxLength="20"/>
+                <Property Name="Linno" Type="Edm.String" MaxLength="20"/>
+            </EntityType>
+            <EntityType Name="ZenData_Rev">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.MainEntity" Partner="revs">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Rev" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Descr" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Prep" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Chk" Type="Edm.String" MaxLength="3"/>
+                <Property Name="App" Type="Edm.String" MaxLength="3"/>
+                <Property Name="Dater" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <EntityType Name="ZengData_Nts">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.MainEntity" Partner="nts">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Note" Type="Edm.String" MaxLength="4"/>
+            </EntityType>
+            <EntityType Name="ZenData_Htc">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.MainEntity" Partner="htc">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Htcirc" Type="Edm.String" MaxLength="20"/>
+            </EntityType>
+            <EntityType Name="AssetMain_Doc">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Mandt" Type="Edm.String" MaxLength="3"/>
+                <NavigationProperty Name="Tagno" Type="CatalogService.AssetMain" Partner="docs">
+                    <ReferentialConstraint Property="Tagno_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="Tagno_ID" Type="Edm.Guid"/>
+                <Property Name="Item" Type="Edm.Int32"/>
+                <Property Name="Docno" Type="Edm.String" MaxLength="40"/>
+                <Property Name="Doctyp" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Doctitle" Type="Edm.String" MaxLength="132"/>
+                <Property Name="Comnt" Type="Edm.String" MaxLength="40"/>
+            </EntityType>
+            <Annotations Target="CatalogService.MainEntity/cableFlag">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="CatalogService.MainEntity/equipFlag">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="CatalogService.MainEntity/heatFlag">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

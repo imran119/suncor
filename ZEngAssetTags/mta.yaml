@@ -41,6 +41,14 @@ modules:
       - comsuncorvaluelist.zip
       name: comsuncorvaluelist
       target-path: resources/
+    - artifacts:
+      - comsuncorzengassettags.zip
+      name: comsuncorzengassettags
+      target-path: resources/
+    - artifacts:
+      - comsuncorassetmainapp.zip
+      name: comsuncorassetmainapp
+      target-path: resources/
 - name: comsuncorassetlist
   type: html5
   path: app/assetlist
@@ -54,6 +62,26 @@ modules:
 - name: comsuncorvaluelist
   type: html5
   path: app/valuelist
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: comsuncorzengassettags
+  type: html5
+  path: app/zengassettags
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: comsuncorassetmainapp
+  type: html5
+  path: app/assetmainapp
   build-parameters:
     build-result: dist
     builder: custom

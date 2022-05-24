@@ -5,9 +5,10 @@ annotate CatalogService.MainEntity with @(
         Data    : [
             { Value   : Dlc},
             { Value   : Sys},
-            { Value   : Eqfnr},
-            
-        ]
+            { Value   : Eqfnr},  
+        ],
+        
+        
     },
     UI.FieldGroup #section2         : {
         Data    : [

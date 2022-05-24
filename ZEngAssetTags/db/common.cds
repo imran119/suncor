@@ -1,28 +1,33 @@
 
 using { managed, cuid, sap, sap.common.CodeList } from '@sap/cds/common';
-
+using CatalogService from '../srv/schema_srv';
+using edm from '../db/schema';
 namespace edm;
 
-//type Cdgrp     :    String(15);
-//type Code     :    Integer;
-//type Codedsc     : String(120);
-//type Codeltxt     :    String(190);
-
-//type Cdgrpdsc     :    String(40);
-//type Tgroup     :    String(30);
-//type Frmname     :    String(30);
-//type Frmdsc     :    String(30);
-//type Tagno     :    String(27);
 //MAIN TABLES
+/*
+type Status : Integer enum {
+  Best  = 5;
+  Good  = 4;
+  Avg   = 3;
+  Poor  = 2;
+  Worst = 1;
+}*/
 
+entity ZEngCodeList: cuid { 
+    Cdgrp : String(15); 
+    Cdgrpdsc : String(40);
+    Code   : Integer; 
+    Codedsc : String(120);
+    Codeltxt : String(190);
+};
 
 
 aspect ZENGDATA1 {
 Mandt : String(3);
-
 Area     :    String(30);
-Dlc     :    String(4);
-Disc     :    String(2);
+Dlc     :    String;
+
 Fissue     :    String(15);
 Hosign     :    String(10);
 Impdat     :    DateTime;
@@ -318,7 +323,7 @@ Dimensn     :    String(60);
 Dclosetyp     :    String(255);
 Dgasktyp     :    String(255);
 Dhngtyp     :    String(255);
-Dlocktyp     :    String(255);
+Docktyp     :    String(255);
 Dopentyp     :    String(255);
 };
 // ZENGDATA5

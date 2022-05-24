@@ -1,0 +1,160 @@
+{
+    "_version": "1.40.0",
+    "sap.app": {
+        "id": "com.suncor.zengassettags",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap-ux/fiori-elements-writer:lrop",
+            "version": "0.3.0"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/catalog/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.101.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.fe.templates": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.suncor.zengassettags.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": ":?query:",
+                    "name": "MainEntityList",
+                    "target": "MainEntityList"
+                },
+                {
+                    "pattern": "MainEntity({key}):?query:",
+                    "name": "MainEntityObjectPage",
+                    "target": "MainEntityObjectPage"
+                },
+                {
+                    "pattern": "MainEntity({key})/docs({key2}):?query:",
+                    "name": "ZengData_DocObjectPage",
+                    "target": "ZengData_DocObjectPage"
+                }
+            ],
+            "targets": {
+                "MainEntityList": {
+                    "type": "Component",
+                    "id": "MainEntityList",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "entitySet": "MainEntity",
+                            "variantManagement": "Page",
+                            "navigation": {
+                                "MainEntity": {
+                                    "detail": {
+                                        "route": "MainEntityObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "MainEntityObjectPage": {
+                    "type": "Component",
+                    "id": "MainEntityObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "editableHeaderContent": false,
+                            "entitySet": "MainEntity",
+                            "navigation": {
+                                "docs": {
+                                    "detail": {
+                                        "route": "ZengData_DocObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ZengData_DocObjectPage": {
+                    "type": "Component",
+                    "id": "ZengData_DocObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "editableHeaderContent": false,
+                            "entitySet": "ZengData_Doc"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    }
+}

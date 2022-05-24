@@ -2,15 +2,21 @@ const cds = require("@sap/cds");
 
 
 module.exports = async (srv) => {
-    const {MainEntity} = srv.entities;
+    const {MainEntity, ZEngCLEntity} = srv.entities;
     srv.after(["READ"],MainEntity, async (response) => {
-        console.log('YAHOooooooooooooo' + JSON.stringify(response));
+       // console.log('after');
         if(!response) return;
-       /* if(response.Tgroup == "Equipment") {
+       /* if(response.Tgroup == "
+       Equipment") {
             response.cableFlag = true;
             response.heatFlag = true;
         } */
     });
+    srv.after(["READ"],ZEngCLEntity, async (response) => {
+       // console.log('ZEngCLEntity' + JSON.stringify(response));
+        if(!response) return;
+      
+    }); 
 };
 
 async function enableTagGroup(tGroup, rsp) {
