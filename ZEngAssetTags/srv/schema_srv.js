@@ -2,8 +2,13 @@ const cds = require("@sap/cds");
 
 
 module.exports = async (srv) => {
-    const {AssetMain} = srv.entities;
+    const {AssetMain, AssetMainReport} = srv.entities;
     srv.after(["READ"],AssetMain, async (response) => {
+        if(!response) return;
+        if(!response.length)
+            enableTagGroup(response.Tgroup, response);
+    });
+    srv.after(["READ"],AssetMainReport, async (response) => {
         if(!response) return;
         if(!response.length)
             enableTagGroup(response.Tgroup, response);

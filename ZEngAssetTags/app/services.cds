@@ -22,3 +22,9 @@ using from './assetmainapp/instruments-data';
 using from './assetmainapp/line-data';
 using from './assetmainapp/tag-list';
 using from './assetmainapp/value-helps';
+
+using from './edmreport/labels';
+using from './edmreport/annotations';
+using from './edmreport/eq-report';
+using from './edmreport/cab-report';
+using from './edmreport/heat-report';

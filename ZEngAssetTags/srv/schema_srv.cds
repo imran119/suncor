@@ -10,6 +10,22 @@ service CatalogService  {
  entity AssetMainHtc as projection on edm.AssetMain_Htc;
  entity AssetMainLin as projection on edm.AssetMain_Lin;
 
+ //entity  AssetMainReport as projection on edm.AssetMain excluding {Apbdy, };
+@cds.redirection.target
+@readonly
+entity AssetMainReport as select from edm.AssetMain;
+
+@readonly
+entity AssetMainEQReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Tagsrc, Vendtag, Xissue, Ainsp, Gsgrp, Indep from edm.AssetMain;
+
+@readonly
+entity AssetMainCABReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Alhh, Allw, Alst, Ctrlact, Ctrlfl from edm.AssetMain;
+
+@readonly
+entity AssetMainHTReport as select ID, Tagno, Pcumod2, Pcumod, Pcunod, Pcuslv, Tdesc,  Ctrlact, Ctrlfl from edm.AssetMain;
+
+
+
  //entity F4_Detail as projection on edm.ZEDF4_Detail;
  //entity ZEngCLEntity as projection on edm.ZEngCodeList;
 
