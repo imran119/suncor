@@ -1,0 +1,198 @@
+{
+    "_version": "1.40.0",
+    "sap.app": {
+        "id": "com.suncor.edmreport1",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap-ux/fiori-elements-writer:lrop",
+            "version": "0.3.6",
+            "toolsId": "656a8c82-5b33-41bf-8a1a-0328aa678edd"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/catalog/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "4.0"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.101.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.fe.templates": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.suncor.edmreport1.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": ":?query:",
+                    "name": "AssetMainReportList",
+                    "target": "AssetMainReportList"
+                },
+                {
+                    "pattern": "AssetMainReport({key}):?query:",
+                    "name": "AssetMainReportObjectPage",
+                    "target": "AssetMainReportObjectPage"
+                },
+                {
+                    "pattern": "AssetMainReport({key})/docs({key2}):?query:",
+                    "name": "AssetMainDocObjectPage",
+                    "target": "AssetMainDocObjectPage"
+                }
+            ],
+            "targets": {
+                "AssetMainReportList": {
+                    "type": "Component",
+                    "id": "AssetMainReportList",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "entitySet": "AssetMainReport",
+                            "variantManagement": "Page",
+                            "navigation": {
+                                "AssetMainReport": {
+                                    "detail": {
+                                        "route": "AssetMainReportObjectPage"
+                                    }
+                                }
+                            },
+                            "initialLoad": true,
+                            "views": {
+                                "paths": [
+                                    {
+                                        "key": "tab12",
+                                        "annotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#gv1"
+                                    },
+                                    {
+                                        "key": "tab13",
+                                        "annotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#ev1"
+                                    },
+                                    {
+                                        "key": "tab14",
+                                        "annotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#cb1"
+                                    }
+                                ],
+                                "showCounts": true
+                            },
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem#equipreport1": {
+                              	"columns": {
+										"DataField::Accpfor": {
+											"availability": "Hidden"
+										},
+                                        "DataField::Accpcas": {
+											"availability": "Hidden"
+										}   
+									}
+                                }
+                            }
+                        }
+                    }
+                },
+                "AssetMainReportObjectPage": {
+                    "type": "Component",
+                    "id": "AssetMainReportObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "editableHeaderContent": false,
+                            "entitySet": "AssetMainReport",
+                            "navigation": {
+                                "docs": {
+                                    "detail": {
+                                        "route": "AssetMainDocObjectPage"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "AssetMainDocObjectPage": {
+                    "type": "Component",
+                    "id": "AssetMainDocObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "editableHeaderContent": false,
+                            "entitySet": "AssetMainDoc"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    }
+}

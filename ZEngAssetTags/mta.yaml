@@ -53,6 +53,10 @@ modules:
       - comsuncoredmreport.zip
       name: comsuncoredmreport
       target-path: resources/
+    - artifacts:
+      - comsuncoredmreport1.zip
+      name: comsuncoredmreport1
+      target-path: resources/
 - name: comsuncorassetlist
   type: html5
   path: app/assetlist
@@ -96,6 +100,16 @@ modules:
 - name: comsuncoredmreport
   type: html5
   path: app/edmreport
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: comsuncoredmreport1
+  type: html5
+  path: app/edmreport1
   build-parameters:
     build-result: dist
     builder: custom

@@ -28,3 +28,5 @@ using from './edmreport/annotations';
 using from './edmreport/eq-report';
 using from './edmreport/cab-report';
 using from './edmreport/heat-report';
+
+using from './edmreport1/annotations';
