@@ -14,12 +14,12 @@ annotate service.AssetMain with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Tgroup,
+                Value           :    Tgroup_Code,
                 ![@UI.Importance]   : #High,
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Status,
+                Value           :    Status_Code,
                 ![@UI.Importance]   : #High,
             },
             {
@@ -30,7 +30,7 @@ annotate service.AssetMain with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :   Disc,
+                Value           :   Disc_Code,
                 //![@UI.Importance]   : #Low,
             }
 
@@ -60,10 +60,10 @@ annotate service.AssetMain with @(
     //Shown filters for the given fields after opening the application
     UI.SelectionFields : [
         Tagno,
-        Tgroup,
-        Status,
+        Tgroup_Code,
+        Status_Code,
         Tdesc,
-        Disc
+        Disc_Code
        // Disc_ID
     ],
 );
@@ -73,7 +73,7 @@ annotate service.AssetMain with @(
         TypeNamePlural  : 'Asset Tags',
         Title           : {
             $Type : 'UI.DataField',
-            Value : Tgroup,
+            Value : Tgroup_Code,
         },
         Description     : {
             $Type : 'UI.DataField',

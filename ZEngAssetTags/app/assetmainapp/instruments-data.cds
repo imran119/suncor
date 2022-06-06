@@ -6,17 +6,17 @@ annotate service.AssetMain with @(
             { Value   : Elvolt},
             { Value   : Engu},
             { Value   : Eqlin},
-            { Value   : Iscirc},
-            { Value   : Linesz}
+            { Value   : Iscirc_Code},
+            { Value   : Linesz_Code}
         ]
     },
     UI.FieldGroup #insDataSec2         : {
         Data    : [
             { Value   : Insrng},
-            { Value   : Silvl},
+            { Value   : Silvl_Code},
             { Value   : Sigspn},
             { Value   : Sigzr},
-            { Value   : Silvl}
+            { Value   : Silvl_Code}
         ]
     },
     UI.FieldGroup #insDataSec3         : {
@@ -26,11 +26,11 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #insContSec1         : {
         Data    : [
-            { Value   : Ioloc},
+            { Value   : Ioloc_Code},
             { Value   : Iosigd},
-            { Value   : Iosigs},
-            { Value   : Iosigt},
-            { Value   : Iotyp}
+            { Value   : Iosigs_Code},
+            { Value   : Iosigt_Code},
+            { Value   : Iotyp_Code}
         ]
     },
     UI.FieldGroup #insContSec2         : {
@@ -57,12 +57,12 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #instFGsec1         : {
         Data    : [
-            { Value   : Firezn},
+            { Value   : Firezn_Code},
             { Value   : Matl},
             { Value   : Alhg},
             { Value   : Manuf},
             { Value   : Model},
-            { Value   : Dlc},
+            { Value   : Dlc_Code},
             { Value   : Serial},
             { Value   : Alhh}
         ]
@@ -74,7 +74,7 @@ annotate service.AssetMain with @(
     },
        UI.FieldGroup #instJBsec1         : {
         Data    : [
-            { Value   : Iscirc},
+            { Value   : Iscirc_Code},
             { Value   : Alhh}
         ]
     },

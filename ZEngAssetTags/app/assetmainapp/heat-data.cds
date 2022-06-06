@@ -11,14 +11,14 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #heatSec2         : {
         Data    : [
-            { Value   : Cbltyp},
+            { Value   : Cbltyp_Code},
             { Value   : Nopass},
             { Value   : Operc},
             { Value   : Bkgrp},
             { Value   : Heatout},
             { Value   : Totcircl},
             { Value   : Inrcur},
-            { Value   : Pwrpt},
+            { Value   : Pwrpt_Code},
         ]
     }
 

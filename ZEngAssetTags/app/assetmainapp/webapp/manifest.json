@@ -130,6 +130,7 @@
                         "settings": {
                             "entitySet": "AssetMain",
                             "variantManagement": "Page",
+                            "navToListOnSave": true,
                             "navigation": {
                                 "AssetMain": {
                                     "detail": {
@@ -149,6 +150,7 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
+                            "navToListOnSave": true,
                             "entitySet": "AssetMain",
                             "sectionLayout": "Tabs",
                             "navigation": {

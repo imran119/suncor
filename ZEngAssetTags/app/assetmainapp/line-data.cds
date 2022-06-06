@@ -3,11 +3,11 @@ using CatalogService as service from '../services';
 annotate service.AssetMain with @(
     UI.FieldGroup #lineDSec1         : {
         Data    : [
-            { Value   : Linesz},
-            { Value   : Pipspec},
+            { Value   : Linesz_Code},
+            { Value   : Pipspec_Code},
             { Value   : Sched},
             { Value   : Matl},
-            { Value   : Inscls},
+            { Value   : Inscls_Code},
             { Value   : Ndtcls},
             { Value   : Ptcls},
             { Value   : Fluid}
@@ -15,8 +15,8 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #lineDSec2         : {
         Data    : [
-            { Value   : Frtag},
-            { Value   : Gld1Fr}
+            { Value   : Frtag_Code},
+            { Value   : Gld1Fr_Code}
         ]
     },
     UI.FieldGroup #lineDSec3         : {

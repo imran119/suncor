@@ -95,11 +95,6 @@
                     "pattern": "F4_Header({key}):?query:",
                     "name": "F4_HeaderObjectPage",
                     "target": "F4_HeaderObjectPage"
-                },
-                {
-                    "pattern": "F4_Header({key})/details({key2}):?query:",
-                    "name": "F4_DetailObjectPage",
-                    "target": "F4_DetailObjectPage"
                 }
             ],
             "targets": {
@@ -117,7 +112,9 @@
                                         "route": "F4_HeaderObjectPage"
                                     }
                                 }
-                            }
+                            },
+                            "initialLoad": true,
+                            "showCounts": true
                         }
                     }
                 },
@@ -128,25 +125,20 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
+                            "navToListOnSave": true,
                             "entitySet": "F4_Header",
-                            "navigation": {
-                                "details": {
-                                    "detail": {
-                                        "route": "F4_DetailObjectPage"
+                            "controlConfiguration": {
+                                "details/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "ResponsiveTable",
+                                        "enablePaste": true,
+                                        "creationMode": {
+                                            "name": "InlineCreationRows",
+                                            "createAtEnd": true
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }
-                },
-                "F4_DetailObjectPage": {
-                    "type": "Component",
-                    "id": "F4_DetailObjectPage",
-                    "name": "sap.fe.templates.ObjectPage",
-                    "options": {
-                        "settings": {
-                            "editableHeaderContent": false,
-                            "entitySet": "F4_Detail"
                         }
                     }
                 }

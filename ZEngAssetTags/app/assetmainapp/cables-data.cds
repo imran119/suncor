@@ -3,23 +3,23 @@ using CatalogService as service from '../services';
 annotate service.AssetMain with @(
     UI.FieldGroup #cablesec1         : {
         Data    : [
-            { Value   : Cblcd},
-            { Value   : Cblsys},
+            { Value   : Cblcd_Code},
+            { Value   : Cblsys_Code},
             { Value   : Wonum}
         ]
     },
     UI.FieldGroup #fromEquipD         : {
         Data    : [
-            { Value   : Frtag},
-            { Value   : Gld1Fr},
+            { Value   : Frtag_Code},
+            { Value   : Gld1Fr_Code},
             { Value   : Frdwg},
             { Value   : Frdsc3},
         ]
     },
     UI.FieldGroup #toEquipD         : {
         Data    : [
-            { Value   : Totag},
-            { Value   : Gld1To},
+            { Value   : Totag_Code},
+            { Value   : Gld1To_Code},
             { Value   : Todwg},
             { Value   : Toeqdsc},
         ]

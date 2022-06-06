@@ -10,12 +10,12 @@ annotate service.AssetMain with @(
         {
             $Type : 'UI.DataField',
             Label : 'Area',
-            Value : Area,
+            Value : Area_Code,
         },
         {
             $Type : 'UI.DataField',
             Label : 'Dlc',
-            Value : Dlc,
+            Value : Dlc_Code,
         },
         {
             $Type : 'UI.DataField',
@@ -25,7 +25,7 @@ annotate service.AssetMain with @(
         {
             $Type : 'UI.DataField',
             Label : 'Hosign',
-            Value : Hosign,
+            Value : Hosign_Code,
         },
     ]
 );
@@ -41,12 +41,12 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Area',
-                Value : Area,
+                Value : Area_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Dlc',
-                Value : Dlc,
+                Value : Dlc_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -56,17 +56,17 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Hosign',
-                Value : Hosign,
+                Value : Hosign_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Impdat',
-                Value : Impdat,
+                Value : Impdat_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Itag',
-                Value : Itag,
+                Value : Itag_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -76,12 +76,12 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Ponum',
-                Value : Ponum,
+                Value : Ponum_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Sapb',
-                Value : Sapb,
+                Value : Sapb_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -101,7 +101,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Xissue',
-                Value : Xissue,
+                Value : Xissue_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -141,7 +141,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Linesz',
-                Value : Linesz,
+                Value : Linesz_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -151,7 +151,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Typgen',
-                Value : Typgen,
+                Value : Typgen_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -166,12 +166,12 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Future',
-                Value : Future,
+                Value : Future_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Hazflg',
-                Value : Hazflg,
+                Value : Hazflg_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -181,7 +181,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Lgflg',
-                Value : Lgflg,
+                Value : Lgflg_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -206,7 +206,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Pvflg',
-                Value : Pvflg,
+                Value : Pvflg_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -231,12 +231,12 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Suppl',
-                Value : Suppl,
+                Value : Suppl_Code,
             },
             {
                 $Type : 'UI.DataField',
                 Label : 'Vlvflg',
-                Value : Vlvflg,
+                Value : Vlvflg_Code,
             },
             {
                 $Type : 'UI.DataField',
@@ -291,7 +291,7 @@ annotate service.AssetMain with @(
             {
                 $Type : 'UI.DataField',
                 Label : 'Disc',
-                Value : Disc,
+                Value : Disc_Code,
             },
             {
                 $Type : 'UI.DataField',

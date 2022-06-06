@@ -16,6 +16,17 @@ annotate CatalogService.F4_Header with @(
         ]
     }, 
 );
+annotate CatalogService.F4_Header with {
+      ID              @UI.Hidden @readonly        @mandatory @UI.ExcludeFromNavigationContext;
+      Cdgrp           @title : '{i18n>Cdgrp}' @Core.Immutable  @mandatory;
+      Cdgrpdsc          @title : '{i18n>Cdgrpdsc}' @Core.Immutable;
+};
+
+annotate CatalogService.F4_Detail with {
+      Code           @title : '{i18n>Code}' @Core.Immutable  @mandatory;
+      Codedsc        @title : '{i18n>Codedsc}'; 
+      Codeltxt       @title : '{i18n>Codeltxt}'; 
+};
 /**
     UI.SelectionFields
     Search-Term: #VisibleFilters

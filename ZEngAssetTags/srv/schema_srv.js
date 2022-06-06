@@ -12,7 +12,7 @@ module.exports = async (srv) => {
         if(!response) return;
         if(!response.length)
             enableTagGroup(response.Tgroup, response);
-    });
+    }); 
     srv.after("draftActivate", "AssetMain", async (response) => {
         if(!response) return;
         if(!response.length)

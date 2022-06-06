@@ -25,15 +25,15 @@ annotate service.AssetMain with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Value : Disc
+                Value : Disc_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Dlc
+                Value : Dlc_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Phtyp
+                Value : Phtyp_Code
             }
         ]
     },

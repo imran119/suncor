@@ -4,7 +4,7 @@ annotate service.AssetMain with @(
     UI.FieldGroup #eqipDataSec1         : {
         Data    : [
             { Value   : Compdsc},
-            { Value   : Dlc},
+            { Value   : Dlc_Code},
             { Value   : Dlcdsc}
         ]
     },
@@ -21,10 +21,10 @@ annotate service.AssetMain with @(
     UI.FieldGroup #eqipLG1         : {
         Data    : [
             { Value   : Compdsc},
-            { Value   : Dlc},
+            { Value   : Dlc_Code},
             { Value   : Serial},
              { Value   : Manuf},
-            { Value   : Lgflg}
+            { Value   : Lgflg_Code}
         ]
     },
     UI.FieldGroup #eqipLG2         : {
@@ -32,7 +32,7 @@ annotate service.AssetMain with @(
             { Value   : Nderptno},
             { Value   : Swl},
             { Value   : Minsftr},
-             { Value   : Tstdat},
+             { Value   : Tstdat_Code},
             { Value   : Tstload}
         ]
     },
@@ -45,7 +45,7 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #pVesselSec1        : {
         Data    : [
-            { Value   : Dlc},
+            { Value   : Dlc_Code},
             {
                 $Type   : 'UI.DataFieldForAnnotation',
                 Target  : '@UI.ConnectedFields#compCFWt'
@@ -87,7 +87,7 @@ annotate service.AssetMain with @(
     },
     UI.FieldGroup #pVesselSec3    : {
         Data    : [
-            { Value   : Pvflg},
+            { Value   : Pvflg_Code},
             { Value   : Pdes},
             { Value   : Popr},
              { Value   : Ptst},
@@ -109,7 +109,7 @@ annotate service.AssetMain with @(
     }, 
     UI.FieldGroup #electrSec1    : {
         Data    : [
-            { Value   : Dlc},
+            { Value   : Dlc_Code},
             { Value   : Elvolt},
             { Value   : Dutykw}
         ]
@@ -177,7 +177,7 @@ annotate service.AssetMain with @(
         Data        : {
             Vestyp    : {
                 $Type : 'UI.DataField', 
-                Value : Vestyp,
+                Value : Vestyp_Code,
             },
             Dimensn     : {
                 $Type : 'UI.DataField',

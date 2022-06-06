@@ -1,11 +1,9 @@
 using edm from '../db/schema';
 
 service CatalogService  {
- entity MainEntity as projection on edm.ZengMain;
- entity F4_Header as projection on edm.ZEDF4_Header;
+ entity F4_Header as projection on edm.ZEDF4_Header;  
  entity F4_Detail as projection on edm.ZEDF4_Detail;
-
- entity AssetMain as projection on edm.AssetMain;
+ entity AssetMain as projection on edm.AssetMain; 
  entity AssetMainDoc as projection on edm.AssetMain_Doc;
  entity AssetMainHtc as projection on edm.AssetMain_Htc;
  entity AssetMainLin as projection on edm.AssetMain_Lin;
@@ -15,14 +13,14 @@ service CatalogService  {
 @readonly
 entity AssetMainReport as select from edm.AssetMain;
 
-@readonly
-entity AssetMainEQReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Tagsrc, Vendtag, Xissue, Ainsp, Gsgrp, Indep from edm.AssetMain;
+////@readonly
+//entity AssetMainEQReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Tagsrc, Vendtag, Xissue, Ainsp, Gsgrp, Indep from edm.AssetMain;
 
-@readonly
-entity AssetMainCABReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Alhh, Allw, Alst, Ctrlact, Ctrlfl from edm.AssetMain;
+//@readonly
+//entity AssetMainCABReport as select ID, Tagno, Tgroup, Status, Disc, Tdesc, Alhh, Allw, Alst, Ctrlact, Ctrlfl from edm.AssetMain;
 
-@readonly
-entity AssetMainHTReport as select ID, Tagno, Pcumod2, Pcumod, Pcunod, Pcuslv, Tdesc,  Ctrlact, Ctrlfl from edm.AssetMain;
+//@readonly
+//entity AssetMainHTReport as select ID, Tagno, Pcumod2, Pcumod, Pcunod, Pcuslv, Tdesc,  Ctrlact, Ctrlfl from edm.AssetMain;
 
 
 
@@ -58,7 +56,7 @@ entity JoinF4 as select from (select from edm.ZEDF4_Detail1) as a; */
 //entity JoinF4 as select ID from edm.ZEDF4_Header1 where ID in (select ID from edm.ZEDF4_Detail1);
 
  //view VLDlc as select from edm.ZEDF4_Detail11 where Cdgrp = (select ID from edm.ZEDF4_Header11 where Cdgrp = 'LALL');
-  
+  /*
  view Disc_Cl
 	as  SELECT from edm.ZEDF4_Header LEFT JOIN edm.ZEDF4_Detail on ZEDF4_Header.ID = ZEDF4_Detail.Cdgrp_ID {  ZEDF4_Header.ID, ZEDF4_Header.Cdgrp, ZEDF4_Header.Cdgrpdsc, ZEDF4_Detail.Cdgrp_ID,ZEDF4_Detail.Code, ZEDF4_Detail.Codedsc, ZEDF4_Detail.Codeltxt  } where ZEDF4_Header.Cdgrp = 'DISC';
  view Phtyp_Cl
@@ -202,7 +200,7 @@ view Sapb_Cl
 
 view Tagroup_Cl
 	as  SELECT from edm.ZEDF4_Header LEFT JOIN edm.ZEDF4_Detail on ZEDF4_Header.ID = ZEDF4_Detail.Cdgrp_ID {  ZEDF4_Header.ID, ZEDF4_Header.Cdgrp, ZEDF4_Header.Cdgrpdsc, ZEDF4_Detail.Cdgrp_ID,ZEDF4_Detail.Code, ZEDF4_Detail.Codedsc, ZEDF4_Detail.Codeltxt  } where ZEDF4_Header.Cdgrp = 'TAGGROUP' order by Code asc;
-
+*/
 
 /*
  view VLDlc as select from edm.ZEDF4_Detail1 

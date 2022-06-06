@@ -38,3 +38,8 @@ annotate CatalogService.AssetMain with @(
 ); */
 
 annotate CatalogService.F4_Header with @odata.draft.enabled;
+
+annotate service.F4_Detail with {
+    Code @Common : { Text: Codedsc, TextArrangement : #TextFirst };
+    Cdgrp_Cdgrp @UI.Hidden;
+} ;

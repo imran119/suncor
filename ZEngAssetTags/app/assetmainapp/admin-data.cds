@@ -3,16 +3,16 @@ using CatalogService as service from '../services';
 annotate service.AssetMain with @(
     UI.FieldGroup #adminsec1         : {
         Data    : [
-            { Value   : Sapb},
+            { Value   : Sapb_Code},
             { Value   : Fissue},
-            { Value   : Xissue},
-             { Value   : Itag},
+            { Value   : Xissue_Code},
+             { Value   : Itag_Code},
         ]
     },
  UI.FieldGroup #adminsec2         : {
         Data    : [
-            { Value   : Impdat},
-            { Value   : Hosign},
+            { Value   : Impdat_Code},
+            { Value   : Hosign_Code},
             { Value   : Notifn},
             { Value   : Tagsrc},
             { Value   : Wonum},
