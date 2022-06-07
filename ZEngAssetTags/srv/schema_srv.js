@@ -5,18 +5,22 @@ module.exports = async (srv) => {
     const {AssetMain, AssetMainReport} = srv.entities;
     srv.after(["READ"],AssetMain, async (response) => {
         if(!response) return;
-        if(!response.length)
-            enableTagGroup(response.Tgroup, response);
+        if(!response.length) {
+            enableTagGroup(response.Tgroup.Codedsc, response);
+        }
+            
     });
     srv.after(["READ"],AssetMainReport, async (response) => {
         if(!response) return;
-        if(!response.length)
-            enableTagGroup(response.Tgroup, response);
+        if(!response.length) {
+            enableTagGroup(response.Tgroup.Codedsc, response);
+        }
+            
     }); 
     srv.after("draftActivate", "AssetMain", async (response) => {
         if(!response) return;
         if(!response.length)
-            enableTagGroup(response.Tgroup, response);
+            enableTagGroup(response.Tgroup.Codedsc, response);
     });
 };
  function enableTagGroup(tGroup, res) {

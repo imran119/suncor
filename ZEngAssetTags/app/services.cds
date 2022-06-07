@@ -12,7 +12,7 @@ using from './valuelist/webapp/cdgrp-list';
 
 using from './assetmainapp/capabilities';
 using from './assetmainapp/field-control';
-using from './assetmainapp/labels';
+//using from './assetmainapp/labels';
 using from './assetmainapp/header';
 using from './assetmainapp/core-data';
 using from './assetmainapp/admin-data';
@@ -23,10 +23,12 @@ using from './assetmainapp/line-data';
 using from './assetmainapp/tag-list';
 using from './assetmainapp/value-helps';
 
-using from './edmreport/labels';
-using from './edmreport/annotations';
-using from './edmreport/eq-report';
-using from './edmreport/cab-report';
-using from './edmreport/heat-report';
+//using from './edmreport/labels';
+//using from './edmreport/annotations';
+//using from './edmreport/value-helps';
+//using from './edmreport/eq-report';
+//using from './edmreport/cab-report';
+//using from './edmreport/heat-report';
 
 using from './edmreport1/annotations';
+using from './edmreport1/value-helps'; 

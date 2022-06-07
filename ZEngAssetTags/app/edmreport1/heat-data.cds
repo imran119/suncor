@@ -1,6 +1,6 @@
 using CatalogService as service from '../services';
 
-annotate service.AssetMain with @(
+annotate service.AssetMainReport with @(
     UI.FieldGroup #heatSec1         : {
         Data    : [
             { Value   : Linlgth},
@@ -28,4 +28,4 @@ annotate service.AssetMainHtc with @(
     UI.LineItem : [
         { Value: Htcirc}
     ]
- );*/
+ ) ;*/

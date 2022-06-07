@@ -7,6 +7,7 @@ using from './cables-data';
 using from './equip-data';
 using from './instruments-data';
 using from './line-data';
+using from './heat-data';
 
 annotate service.AssetMainReport with @(
     Common.SemanticKey : [Tagno],
@@ -19,13 +20,13 @@ annotate service.AssetMainReport with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Tgroup,
+                Value           :    Tgroup_Code,
                 Label           :  '{i18n>Tgroup}',
                 ![@UI.Importance]   : #High,
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Status,
+                Value           :    Status_Code,
                 Label           :  '{i18n>Status}',
                 ![@UI.Importance]   : #High,
             },
@@ -38,7 +39,7 @@ annotate service.AssetMainReport with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :   Disc,
+                Value           :   Disc_Code,
                 Label           :  '{i18n>Disc}',
                 //![@UI.Importance]   : #Low,
             }
@@ -51,10 +52,10 @@ annotate service.AssetMainReport with @(
     //Shown filters for the given fields after opening the application
     UI.SelectionFields : [
         Tagno,
-        Tgroup,
-        Status,
+        Tgroup_Code,
+        Status_Code,
         Tdesc,
-        Disc
+        Disc_Code
        // Disc_ID
     ],
 );
@@ -96,7 +97,7 @@ annotate service.AssetMainReport with @(
         TypeNamePlural  : 'Asset Tags',
         Title           : {
             $Type : 'UI.DataField',
-            Value : Tgroup,
+            Value : Tgroup_Code,
         },
         Description     : {
             $Type : 'UI.DataField',

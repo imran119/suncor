@@ -62,8 +62,8 @@ annotate service.AssetMain with @(
         Tagno,
         Tgroup_Code,
         Status_Code,
-        Tdesc,
-        Disc_Code
+        Disc_Code,
+        Tdesc
        // Disc_ID
     ],
 );
