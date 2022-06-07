@@ -11,13 +11,13 @@ annotate service.AssetMainReport with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Tgroup,
+                Value           :    Tgroup_Code,
                 Label           :  '{i18n>Tgroup}',
                 ![@UI.Importance]   : #High,
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :    Status,
+                Value           :    Status_Code,
                 Label           :  '{i18n>Status}',
                 ![@UI.Importance]   : #High,
             },
@@ -30,7 +30,7 @@ annotate service.AssetMainReport with @(
             },
             {
                 $Type           :   'UI.DataField',
-                Value           :   Disc,
+                Value           :   Disc_Code,
                 Label           :  '{i18n>Disc}',
                 //![@UI.Importance]   : #Low,
             }
@@ -46,7 +46,7 @@ annotate service.AssetMainReport with @(
         {
             $Type : 'UI.DataField',
             Label : 'Tag Group',
-            Value : Tgroup,
+            Value : Tgroup_Code,
         },
         {
             $Type : 'UI.DataField',
@@ -71,7 +71,7 @@ annotate service.AssetMainReport with @(
         {
             $Type : 'UI.DataField',
             Label : 'Tgroup',
-            Value : Tgroup,
+            Value : Tgroup_Code,
         },
         {
             $Type : 'UI.DataField',

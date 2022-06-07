@@ -14,6 +14,18 @@
             "id": "@sap-ux/fiori-elements-writer:lrop",
             "version": "0.3.0"
         },
+        "crossNavigation": {
+            "inbounds": {
+                "assettags-display": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "assettags",
+                    "action": "display"
+                }
+            }
+        },
         "dataSources": {
             "mainService": {
                 "uri": "catalog/",
@@ -118,6 +130,7 @@
                         "settings": {
                             "entitySet": "AssetMain",
                             "variantManagement": "Page",
+                            "navToListOnSave": true,
                             "navigation": {
                                 "AssetMain": {
                                     "detail": {
@@ -137,6 +150,7 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
+                            "navToListOnSave": true,
                             "entitySet": "AssetMain",
                             "sectionLayout": "Tabs",
                             "navigation": {

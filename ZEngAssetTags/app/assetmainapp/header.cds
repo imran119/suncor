@@ -12,11 +12,11 @@ annotate service.AssetMain with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : Tgroup
+                Value : Tgroup_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Status
+                Value : Status_Code
             }
         ]
     },
