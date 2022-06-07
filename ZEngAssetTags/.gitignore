@@ -1,3 +1,5 @@
+dist/
+resources/
 # CAP ZEngAssetTags
 _out
 *.db
@@ -33,3 +35,10 @@ mta_archives/
 suncor/ZEngAssetTags/db/.env
 # auto generated wildcard
 suncor/ZEngAssetTags/.env1
+suncor/ZEngAssetTags/app/assetlist/dist
+suncor/ZEngAssetTags/app/edmreport/dist
+suncor/ZEngAssetTags/app/assetmainapp/dist
+suncor/ZEngAssetTags/app/edmreport1/dist
+suncor/ZEngAssetTags/app/valuelist/dist
+suncor/ZEngAssetTags/app/zengassettags/dist
+suncor/ZEngAssetTags/resources

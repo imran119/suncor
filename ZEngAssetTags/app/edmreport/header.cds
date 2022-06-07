@@ -12,11 +12,11 @@ annotate service.AssetMainReport with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : Tgroup
+                Value : Tgroup_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Status
+                Value : Status_Code
             }
         ]
     },
@@ -25,15 +25,15 @@ annotate service.AssetMainReport with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Value : Disc
+                Value : Disc_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Dlc
+                Value : Dlc_Code
             },
             {
                 $Type : 'UI.DataField',
-                Value : Phtyp
+                Value : Phtyp_Code
             }
         ]
     },
